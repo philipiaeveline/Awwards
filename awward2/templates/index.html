@@ -7,7 +7,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="container my-4">
-        <p class="font-weight-bold text-center">The awards of design, creativity and innovation on the internet</p>
+        <p class="font-weight-bold text-center">Awwwards is a professional web design and development competition body. </p>
         <hr class="my-4">
         <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
             {% for project in projects|slice:":3" %}
@@ -43,12 +43,12 @@
                     <div class="circle d-flex">
                         <div class="box-circle">
                             <div class="chart font-weight-bold" data-percent="{{ project.design | floatformat  }}" data-scale-color="#df6c4f"
-                                style="color: #df6c4f;"></div>
+                                style="color: #154628;"></div>
                             <h3 class="legend font-weight-bold" style="font-size: 14px;">Design {{ project.design | floatformat  }}</h3>
                         </div>
                         <div class="box-circle">
                             <div class="chart font-weight-bold" data-percent="{{ project.usability | floatformat  }}" data-scale-color="#ecd06f"
-                                style="color: #ecd06f;"></div>
+                                style="color: #f1cf51;"></div>
                             <h3 class="legend font-weight-bold" style="font-size: 14px;">Usability {{ project.usability | floatformat  }}</h3>
                         </div>
                         <div class="box-circle">
@@ -75,7 +75,7 @@
 <div class="vote text-center">
     <h2>
         <a href="#!" class="text-dark font-weight-bold">
-            We need your vote!
+            vote here!
         </a>
     </h2>
     <hr class="my-4" width="50%">
@@ -140,7 +140,6 @@
 <script>
     $(function () {
         $('.chart').easyPieChart({
-            //your options goes here
         });
     });
 </script>

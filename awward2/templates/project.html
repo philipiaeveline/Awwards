@@ -1,0 +1,18 @@
+{%extends 'django_registration/base.html'%}
+{{ block.super}}
+{% load bootstrap4 %}
+{% block content %}
+{{form.media}}
+<div class="card mx-auto" style="max-width:60rem; padding: 20px;">
+    <form action="{%url 'project'%}" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {% bootstrap_form form%}
+        <input type="submit" class="btn btn-primary btn-sm" value="Post">
+    </form>
+</div>
+{% block scripts %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% bootstrap_javascript %}
+{% endblock %}
+
+{% endblock %}

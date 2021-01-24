@@ -1,0 +1,36 @@
+{%extends "django_registration/base.html"%}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h3 class="white-important" style="font-family: 'Grand Hotel', cursive; color:white;font-size:25px;">You've been logged out</h3>
+    <div class="pt-3">
+        <small class="text" >
+            <h3 style="font-family: 'Grand Hotel', cursive; color:blue;font-size:25px;">Login again?</h3>
+            <div class="card mt-1" style="width: 28rem;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Have an account already?</h5>
+                    <h2 style="color:grey;font-size:13px;">By signing up, you agree to our Terms, Data Policy and
+                        Cookies Policy.</h2>
+                    <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                </div>
+            </div>
+        </small>
+    </div>
+</div>
+<div class="container-fluid mt-3">
+    <div class="col-md-12">
+      <div class="footer">
+        <ul class="footer-page text-center" style="font-family: 'apercu',sans-serif;">
+          <li class="footer"><a class="contact" href="https://www.awwwards.com/contact-us/">Contact Us</a></li>
+          <li class="footer"><a class="cookies" href="https://www.awwwards.com/cookies-policy/">Cookies Policy</a></li>
+          <li class="footer"><a class="privacy" href="https://www.awwwards.com/privacy-policy/">Privacy Policy</a></li>
+          <li class="footer"><a class="terms" href="https://www.awwwards.com/terms/">Legal Terms</a></li>
+          <li class="footer"><a class="language" href="https://techcrunch.com/tag/language-support/">Language</a></li>
+        </ul>
+      </div>
+      <h6 class="copyright" style="font-size: 12px;"> <strong>© 2021 EVELINE PHILIPIA</strong> </h6>
+    </div>
+  </div>
+  
+  {% endblock %}

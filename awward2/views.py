@@ -111,31 +111,6 @@ def project(request):
                     'form':form
                 }
             return render(request,'project.html', context)
-        
-# @login_required(login_url='/accounts/login/')
-# @csrf_protect
-# def rating(request, pk):
-#     project = get_object_or_404(Project, pk=pk)
-#     current_user = request.user
-#     if request.method == 'POST':
-#         form = RatingForm(request.POST)
-#         if form.is_valid():
-#             design_rating = form.cleaned_data["design_rating"]
-#             usability_rating = form.cleaned_data["usability_rating"]
-#             content_rating = form.cleaned_data["content_rating"]
-#             comment = form.cleaned_data["comment"]
-#             rating = form.save(commit=False)
-#             rating.project = project
-#             rating.author = current_user
-#             rating.design_rating = design_rating
-#             rating.usability_rating = usability_rating
-#             rating.content_rating = content_rating
-#             rating.comment = comment
-#             rating.save()
-
-#     else:
-#         form = RatingForm()
-#     return render(request,'rating.html', {'project' : project, 'form' : form})   
 
 class ProfileList(APIView):
     def get(self, request, format=None):

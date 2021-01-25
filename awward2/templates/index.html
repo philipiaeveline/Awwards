@@ -98,7 +98,6 @@
                             <a href="{% url 'rating' project.id %}">
                             <h6 class="card-title black-text">{{ project.project_title }}</h6>
                             </a>
-                            <p class="float-left" style="color: black; opacity: 0.7;">From {{ project.location }}</p>
                             <p class="float-right" style="color: black; opacity: 0.7;">{{ project.date_posted | date:'F d, Y'}}</p>
                         </div>
                         <br>
@@ -110,7 +109,7 @@
                                     class="rounded-circle img-fluid" width="40" height="40">&nbsp;
                                 </a>
                                 <h4 class="text-uppercase mt-2" style="font-size: 12px;">
-                                    by <a class="mr-2" href="{% url 'rating' project.pk %}"><strong class="black-text font-weight-bold">{{ project.author }}</strong> </a>
+                                    by <a class="mr-2" href="{% url 'rating' project.id %}"><strong class="black-text font-weight-bold">{{ project.author }}</strong> </a>
                                 </h4>
 
                             </div>

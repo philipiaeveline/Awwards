@@ -13,8 +13,6 @@ class Project(models.Model):
     description = models.TextField(max_length=1000,  null=True)
     profile = models.ForeignKey('Profile', on_delete=models.CASCADE, related_name='profile')
     date_posted = models.DateTimeField(auto_now_add=True)
-    location=models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
-    tags=models.ManyToManyField(tags, blank=True)
     like = models.PositiveIntegerField(default=0)
     
     def __str__(self):

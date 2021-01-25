@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('',include('awwrd1app.urls')),
+    path('',include('awward2.urls')),
     path('api-auth/', include('rest_framework.urls'))
        
 ]

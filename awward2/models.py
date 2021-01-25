@@ -11,7 +11,7 @@ class Project(models.Model):
     project_image = models.ImageField(upload_to='projects/',null=True)
     project_title = models.CharField(max_length=100, null=True)
     description = models.TextField(max_length=1000,  null=True)
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='profile')
+    profile = models.ForeignKey('Profile', on_delete=models.CASCADE, related_name='profile')
     date_posted = models.DateTimeField(auto_now_add=True)
     location=models.ForeignKey(Location, on_delete=models.CASCADE, null=True)
     tags=models.ManyToManyField(tags, blank=True)
@@ -57,7 +57,7 @@ class Comment(models.Model):
     content = models.TextField(null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comment')
     date_posted = models.DateTimeField(auto_now_add=True)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='project_comment')        
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, related_name='project_comment')        
     
     def __str__(self):
         return self.comment
@@ -137,7 +137,7 @@ class Ratings(models.Model):
         (10, '10'),
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='ratings',null=True)
+    project = models.ForeignKey('Project', on_delete=models.CASCADE, related_name='ratings',null=True)
     design_rating = models.PositiveIntegerField(choices=RATING_CHOICES, default=0)
     usability_rating = models.PositiveIntegerField(choices=RATING_CHOICES, default=0)
     content_rating = models.PositiveIntegerField(choices=RATING_CHOICES, default=0)

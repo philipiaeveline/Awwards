@@ -24,10 +24,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django_registration.backends.one_step.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('',include('awwards.urls')),
+    path('',include('awwrd1app.urls')),
     path('api-auth/', include('rest_framework.urls'))
+       
 ]
  
-
- if settings.DEBUG:
+if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

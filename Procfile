@@ -1,0 +1,1 @@
+web: gunicorn awwrd1app.wsgi --log-file -

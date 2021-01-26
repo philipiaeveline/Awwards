@@ -14,6 +14,7 @@ class Project(models.Model):
     profile = models.ForeignKey('Profile', on_delete=models.CASCADE, related_name='profile')
     date_posted = models.DateTimeField(auto_now_add=True)
     like = models.PositiveIntegerField(default=0)
+    link = models.URLField()
     
     def __str__(self):
             return self.project_title

@@ -20,11 +20,3 @@ class ProfileUpdateForm(forms.ModelForm):
         model = Profile
         fields = ['image','bio']     
         
-class RatingForm(forms.ModelForm):
-    class Meta:
-        model = Ratings
-        design_rating = forms.IntegerField()
-        usability_rating = forms.IntegerField()
-        content_rating = forms.IntegerField()
-        comment = forms.CharField(widget=forms.Textarea(attrs={"class": "form-control","placeholder": "Leave a comment"}))    
-        exclude =['project','author']    

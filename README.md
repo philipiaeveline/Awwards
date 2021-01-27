@@ -8,7 +8,6 @@ This website will allow to post,comment and search urls like your previous proje
  Click [View Site]()  to visit the site
  
 ## User Stories
- 
 * Sign in to the application to start using.
 * Upload my pictures to the application.
 * See my profile with all my pictures.

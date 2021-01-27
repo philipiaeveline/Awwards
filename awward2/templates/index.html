@@ -1,13 +1,10 @@
 {%include 'django_registration/base.html'%}
 {% load static %}
 {% block styles %}
-<link rel="stylesheet" href="{% static 'css/awwwards.css' %}">
-<link rel="stylesheet" href="{% static 'js/jquery.easypiechart.js' %}">
 {% endblock  %}
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-
         <div class="container my-4">
             <p class="font-weight-bold text-center">Awwards is a professional web design and development competition
                 body. </p>
@@ -54,13 +51,6 @@
                 <h3 class="legend font-weight-bold" style="font-size: 14px;">Design {{ project.design | floatformat  }}
                 </h3>
             </div>
-            <div class="box-circle">
-                <div class="chart font-weight-bold" data-percent="{{ project.usability | floatformat  }}"
-                    data-scale-color="#ecd06f" style="color: #f1cf51;"></div>
-                <h3 class="legend font-weight-bold" style="font-size: 14px;">Usability
-                    {{ project.usability | floatformat  }}</h3>
-            </div>
-
         </div>
     </div>
     {%endfor%}
